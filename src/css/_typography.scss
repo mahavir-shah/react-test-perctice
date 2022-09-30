@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;600&display=swap');
+
+//font family
+$font-family-base: 'Poppins', sans-serif;
+$font-family-work-san: 'Work Sans', sans-serif;
+$font-family-inter: 'Inter', sans-serif;
+
+$font-weight-regular: 400; // Regular 400
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$heading-font-family: $font-family-base;
+$body-font-family: $font-family-base;
+
+//font size
+$h1-font-size: 42px;
+$h2-font-size: 36px;
+$h3-font-size: 32px;
+$h4-font-size: 24px;
+$h5-font-size: 24px;
+$h6-font-size: 24px;
+$titles: 20px;
+$subtext: 16px;
+$tabs: 16px;
+$body-copy-primary: 16px;
+$body-copy-secondary: 14px;
+$button-primary: 16px;
+$button-secondary: 14px;
+$lp-cta: $body-copy-secondary;

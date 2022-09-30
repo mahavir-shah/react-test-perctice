@@ -1,0 +1,201 @@
+@import '~bootstrap/scss/bootstrap';
+@import './css/_typography';
+@import './css/_colors';
+
+@mixin atlas-scroll-bar {
+  ::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $light-gray;
+    border-radius: 0.25rem;
+  }
+}
+
+@mixin d-none {
+  display: none;
+}
+
+@mixin d-block {
+  display: block;
+}
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin d-align-center {
+  @include d-flex;
+  align-items: center;
+}
+
+@mixin d-justify-center {
+  @include d-flex;
+  justify-content: center;
+}
+
+@mixin d-align-justify-center {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin d-flex-center {
+  @include d-flex;
+  @include d-align-justify-center;
+}
+
+@mixin d-flex-column {
+  @include d-flex;
+  flex-direction: column;
+}
+
+@mixin h1 {
+  font: {
+    size: $h1-font-size;
+    family: $heading-font-family;
+    weight: $font-weight-bold;
+  }
+  color: $primary;
+  line-height: 1;
+  text-transform: uppercase;
+  @include media-breakpoint-down(sm) {
+    font-size: $testimonial-title;
+  }
+  @include media-breakpoint-only(md) {
+    font-size: $banner-title - 1;
+  }
+  @include media-breakpoint-only(lg) {
+    font-size: $banner-title - 0.8;
+  }
+}
+
+@mixin lp-cta {
+  color: $white;
+  font: {
+    size: $lp-cta;
+    family: $font-family-inter;
+    weight: $font-weight-bold;
+  }
+  background-color: $lp-cta-bg;
+  padding: 15px 26px;
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
+  position: relative;
+  line-height: 1;
+  border-radius: 50px;
+  border: none;
+  @include media-breakpoint-down(md) {
+    padding: 10px 20px;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $secondary-green-solid;
+  }
+  &:focus-within {
+    text-decoration: none;
+    background-color: $secondary-green-solid;
+  }
+}
+@mixin button-success {
+  font-family: $font-family-work-san;
+  font-weight: $font-weight-semibold;
+  font-size: $body-copy-primary;
+  background-color: $success-button;
+  border: none;
+  color: $white;
+  border-radius: 4px;
+  padding: 16px 18px;
+  opacity: 1;
+  outline: none;
+  box-shadow: none;
+  &:disabled {
+    background-color: $disabled-button;
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: $success-button;
+    outline: none;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: $success-button;
+  }
+  &:active {
+    background-color: $cta-focus;
+    outline: 0;
+    box-shadow: none;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+}
+@mixin button-outline {
+  font-family: $font-family-work-san;
+  font-weight: $font-weight-semibold;
+  font-size: $body-copy-primary;
+  background-color: transparent;
+  border: 1px solid $secondary-green-solid;
+  color: $secondary-green-solid;
+  border-radius: 4px;
+  padding: 16px 18px;
+  opacity: 1;
+  outline: none;
+  box-shadow: none;
+  &:disabled {
+    background-color: $disabled-button;
+    border: none;
+    outline: none;
+  }
+  &:hover {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+    background-color: transparent;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  &:active {
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+    color: $cta-focus;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+}
+
+.alert {
+  background: $text-primary !important;
+  color: white !important;
+  text-align: center;
+  width: auto;
+  max-width: max-content;
+  margin: auto;
+  border: none;
+  position: absolute !important;
+  top: 17px;
+  height: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  &.fade {
+    opacity: 1 !important;
+  }
+}
+body .button {
+  @include button-success;
+}
